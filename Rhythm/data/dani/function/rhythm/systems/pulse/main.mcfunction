@@ -26,7 +26,8 @@ execute if score $now dani.rhythm.pulse matches 41..60 run function dani:rhythm/
 execute if score $now dani.rhythm.pulse matches 61..100 run function dani:rhythm/systems/pulse/stage/3
 execute if score $now dani.rhythm.pulse matches 101..140 run function dani:rhythm/systems/pulse/stage/4
 execute if score $now dani.rhythm.pulse matches 141..160 run function dani:rhythm/systems/pulse/stage/5
-execute if score $now dani.rhythm.pulse matches 161..200 run function dani:rhythm/systems/pulse/stage/6
+execute if score $now dani.rhythm.pulse matches 161.. run function dani:rhythm/systems/pulse/stage/6
+
 #20-40-40-20 
 ## Display 120/12 10
 #||||I||I||||I||||I||I||||  ♡
@@ -50,4 +51,5 @@ execute if score $now dani.rhythm.pulse matches 151..160 run title @s actionbar 
 execute if score $now dani.rhythm.pulse matches 161..170 run title @s actionbar ["",{text:"{",bold:true},{"text":"----|--|----|----|--|"},{text:"❤",color:"dark_red"},{text:"---"},{text:"}",bold:true}]
 execute if score $now dani.rhythm.pulse matches 171..180 run title @s actionbar ["",{text:"{",bold:true},{"text":"----|--|----|----|--|-"},{text:"❤",color:"dark_red"},{text:"--"},{text:"}",bold:true}]
 execute if score $now dani.rhythm.pulse matches 181..190 run title @s actionbar ["",{text:"{",bold:true},{"text":"----|--|----|----|--|--"},{text:"❤",color:"dark_red"},{text:"-"},{text:"}",bold:true}]
-execute if score $now dani.rhythm.pulse matches 181..190 run title @s actionbar ["",{text:"{",bold:true},{"text":"----|--|----|----|--|---"},{text:"❤",color:"dark_red"},{text:"}",bold:true}]
+execute if score $now dani.rhythm.pulse matches 191..200 run title @s actionbar ["",{text:"{",bold:true},{"text":"----|--|----|----|--|---"},{text:"❤",color:"dark_red"},{text:"}",bold:true}]
+

@@ -6,7 +6,7 @@
       "type": "minecraft:player"
     },
     "flags": {
-      "is_sprinting": true
+      "is_sneaking": true
     }
   }
 }

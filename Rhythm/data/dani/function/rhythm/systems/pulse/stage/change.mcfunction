@@ -8,3 +8,12 @@ execute if score $now dani.rhythm.pulse matches 161..200 run scoreboard players 
 execute if score $now dani.rhythm.pulse matches ..40 run scoreboard players set @s dani.rhythm.pulse.deathtimer 100
 execute if score $now dani.rhythm.pulse matches 161.. run scoreboard players set @s dani.rhythm.pulse.deathtimer 100
 execute if score $now dani.rhythm.pulse matches 41..160 if score @s dani.rhythm.pulse.deathtimer matches 0.. run scoreboard players set @s dani.rhythm.pulse.deathtimer -1
+### speed 
+execute store result score $speed dani.Global run attribute @s minecraft:movement_speed get 1000
+scoreboard players operation $speedIncrease dani.Global = $speed dani.Global
+execute if score @s dani.rhythm.pulse.stage matches 1..2 run scoreboard players operation $speedIncrease dani.Global *= $const.80 dani.Global
+execute if score @s dani.rhythm.pulse.stage matches 3 run scoreboard players set $speedIncrease dani.Global 10000
+execute if score @s dani.rhythm.pulse.stage matches 4..6 run scoreboard players operation $speedIncrease dani.Global *= $const.108 dani.Global
+execute store result storage dani:player movement_speed float 0.00001 run scoreboard players get $speedIncrease dani.Global
+
+function dani:pack/player/attribute/set_speed with storage dani:player

@@ -14,6 +14,7 @@ execute if score @s dani.rhythm.pulse.beat.tick >= $ticksperbeat dani.rhythm.pul
 
 scoreboard players operation $now dani.rhythm.pulse = @s dani.rhythm.pulse
 scoreboard players operation $now dani.rhythm.pulse.stage = @s dani.rhythm.pulse.stage
+scoreboard players operation @s dani.rhythm.player.defense.final = @s dani.rhythm.player.defense.now
 
 ## changes in bpm
 execute if entity @s[predicate=dani:player/input/jump,predicate=dani:player/flags/is_on_ground] unless score @s dani.rhythm.pulse matches 130.. run scoreboard players add @s dani.rhythm.pulse.change 1
@@ -53,3 +54,4 @@ execute if score $now dani.rhythm.pulse matches 171..180 run title @s actionbar 
 execute if score $now dani.rhythm.pulse matches 181..190 run title @s actionbar ["",{text:"{",bold:true},{"text":"----|--|----|----|--|--"},{text:"❤",color:"dark_red"},{text:"-"},{text:"}",bold:true}]
 execute if score $now dani.rhythm.pulse matches 191..200 run title @s actionbar ["",{text:"{",bold:true},{"text":"----|--|----|----|--|---"},{text:"❤",color:"dark_red"},{text:"}",bold:true}]
 
+## speed

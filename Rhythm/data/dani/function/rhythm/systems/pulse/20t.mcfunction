@@ -17,3 +17,6 @@ scoreboard players operation @s dani.rhythm.pulse += $change dani.rhythm.pulse
 scoreboard players set @s dani.rhythm.pulse.tick 0
 scoreboard players set @s dani.rhythm.pulse.change 0
 scoreboard players operation @s dani.rhythm.pulse.stage.old = @s dani.rhythm.pulse.stage
+
+execute if score @s dani.rhythm.pulse.stage matches 2 run effect give @s regeneration 2 1 true
+execute if score @s dani.rhythm.pulse.stage matches 1 run effect give @s regeneration 2 2 true

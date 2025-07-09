@@ -35,8 +35,21 @@ scoreboard players set $const.2 dani.Global 2
 scoreboard players set $const.5 dani.Global 5
 scoreboard players set $const.7 dani.Global 7
 scoreboard players set $const.20 dani.Global 20
+scoreboard players set $const.40 dani.Global 40
+scoreboard players set $const.50 dani.Global 50
 scoreboard players set $const.60 dani.Global 60
+scoreboard players set $const.80 dani.Global 80
+scoreboard players set $const.100 dani.Global 100
+scoreboard players set $const.108 dani.Global 108
 
+scoreboard players set $const.115 dani.Global 115
+
+scoreboard players set $const.120 dani.Global 120
+scoreboard players set $const.130 dani.Global 130
+scoreboard players set $const.140 dani.Global 140
+scoreboard players set $const.160 dani.Global 160
+
+scoreboard players set $const.1000 dani.Global 1000
 execute as @a run function dani:pack/player/init
 
 

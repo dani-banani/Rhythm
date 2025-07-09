@@ -8,6 +8,10 @@ function player_motion:internal/technical/load
 
 scoreboard objectives add dani.sneak.timestamp dummy
 scoreboard objectives add dani.jump.timestamp dummy
+scoreboard objectives add dani.foward.timestamp dummy
+scoreboard objectives add dani.backward.timestamp dummy
+scoreboard objectives add dani.left.timestamp dummy
+scoreboard objectives add dani.right.timestamp dummy
 
 scoreboard objectives add dani.input.click.id dummy
 scoreboard objectives add dani.input.click.uuid0 dummy
@@ -34,13 +38,17 @@ scoreboard players set $const.31 dani.Global 31
 scoreboard players set $const.2 dani.Global 2
 scoreboard players set $const.5 dani.Global 5
 scoreboard players set $const.7 dani.Global 7
+scoreboard players set $const.10 dani.Global 10
+
 scoreboard players set $const.20 dani.Global 20
 scoreboard players set $const.40 dani.Global 40
 scoreboard players set $const.50 dani.Global 50
 scoreboard players set $const.60 dani.Global 60
 scoreboard players set $const.80 dani.Global 80
+scoreboard players set $const.90 dani.Global 90
 scoreboard players set $const.100 dani.Global 100
 scoreboard players set $const.108 dani.Global 108
+scoreboard players set $const.110 dani.Global 110
 
 scoreboard players set $const.115 dani.Global 115
 

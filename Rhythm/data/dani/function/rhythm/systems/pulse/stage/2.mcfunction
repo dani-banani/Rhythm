@@ -1,2 +1,1 @@
 execute unless score $now dani.rhythm.pulse.stage matches 2 run function dani:rhythm/systems/pulse/stage/change
-effect give @s minecraft:slowness 1 1 true

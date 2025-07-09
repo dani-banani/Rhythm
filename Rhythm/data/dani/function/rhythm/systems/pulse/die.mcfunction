@@ -1,5 +1,5 @@
 execute store success score success dani.Global run gamerule showDeathMessages false
-damage @s 1000
+kill @s
 $tellraw @a ["",{selector:"@s"},{text:"$(text)"}]
 scoreboard players set @s dani.rhythm.pulse.deathtimer -1
 scoreboard players set @s dani.rhythm.pulse 60

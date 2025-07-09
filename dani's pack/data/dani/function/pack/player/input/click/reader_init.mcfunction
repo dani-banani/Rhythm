@@ -11,3 +11,4 @@ scoreboard players operation @s dani.input.click.id = $tempID dani.input.click.i
 data modify entity @s width set value 0.5
 data modify entity @s height set value 1
 tag @s add dani.input.click.reader
+tag @s add dani.entity

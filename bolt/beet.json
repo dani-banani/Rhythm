@@ -1,0 +1,12 @@
+{
+    "name":"dani",
+    "description":"",
+    "require":[
+        "bolt"
+    ],
+    "datapack":{
+        "load":["src"]
+    },
+    "pipeline":["mecha"],
+    "output":"build"
+}

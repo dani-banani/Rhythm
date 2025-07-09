@@ -1,6 +1,6 @@
 # motion based tp
 
-execute positioned ~ ~.85 ~ run tp @s ^ ^ ^
+execute positioned ~ ~.85 ~ run tp @s ^ ^ ^.1
 data modify storage dani:input reader set from entity @s
 
 execute store result score $posX dani.Global run data get storage dani:input reader.Pos[0] 10000

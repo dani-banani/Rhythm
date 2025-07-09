@@ -13,6 +13,14 @@ scoreboard objectives add dani.backward.timestamp dummy
 scoreboard objectives add dani.left.timestamp dummy
 scoreboard objectives add dani.right.timestamp dummy
 
+scoreboard objectives add dani.second.sneak.timer dummy
+scoreboard objectives add dani.second.jump.timer dummy
+scoreboard objectives add dani.second.foward.timer dummy
+scoreboard objectives add dani.second.backward.timer dummy
+scoreboard objectives add dani.second.left.timer dummy
+scoreboard objectives add dani.second.right.timer dummy
+
+
 scoreboard objectives add dani.input.click.id dummy
 scoreboard objectives add dani.input.click.uuid0 dummy
 scoreboard objectives add dani.input.click.uuid1 dummy

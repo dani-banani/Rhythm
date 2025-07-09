@@ -19,13 +19,24 @@ scoreboard objectives add dani.rhythm.pulse.deathtimer dummy
 scoreboard objectives add dani.rhythm.player.damage dummy
 scoreboard objectives add dani.rhythm.player.defense.now dummy
 scoreboard objectives add dani.rhythm.player.defense.final dummy
+# Jinki
+scoreboard objectives add dani.rhythm.jinki.type dummy
+scoreboard objectives add dani.rhythm.jinki.status dummy
+scoreboard objectives add dani.rhythm.jinki.selectedItemSlot dummy
+scoreboard objectives add dani.rhythm.jinki.selectedItemSlot.old dummy
 
-
+scoreboard objectives add dani.rhythm.projectile.lifetime dummy
 
 scoreboard objectives add dani.rhythm.pulse.stage.consistency dummy
 
 
 scoreboard players set @a dani.rhythm.pulse 65
+
+scoreboard objectives add dani.rhythm.projectile.ID dummy
+scoreboard objectives add dani.rhythm.projectile.jinki_type dummy
+
+
+
 
 schedule function dani:rhythm/main1t 1t append
 schedule function dani:rhythm/main20t 20t replace

@@ -1,0 +1,105 @@
+import math
+
+function dani:rhythm/bolt_init:
+    scoreboard objectives add dani.bolt.projectile.speed dummy
+    scoreboard objectives add dani.bolt.projectile.acceleration dummy
+    scoreboard objectives add dani.bolt.projectile.color.val dummy
+    scoreboard objectives add dani.bolt.projectile.1.2.radius dummy
+    scoreboard objectives add dani.bolt.projectile.1.2.maxradius dummy
+    scoreboard objectives add dani.bolt.particle.color.frame dummy
+    scoreboard objectives add dani.bolt.projectile.1.2.radiusIncrease dummy
+
+def pick_color(start_rgb, end_rgb, current_time, start_time, end_time):
+
+    current_time = max(start_time, min(end_time, current_time))
+    if end_time == start_time:
+        t = 1.0
+    else:
+        t = (current_time - start_time) / (end_time - start_time)
+    r = (start_rgb[0]/255 + (end_rgb[0]/255 - start_rgb[0]/255) * t)
+    g = (start_rgb[1]/255 + (end_rgb[1]/255 - start_rgb[1]/255) * t)
+    b = (start_rgb[2]/255 + (end_rgb[2]/255 - start_rgb[2]/255) * t)
+
+    return (r, g, b)
+
+function dani:rhythm/systems/jinki/type/1/particle/1/main:
+    for frame in range (100):
+        if score @s dani.rhythm.projectile.lifetime matches frame:
+            color = pick_color((0, 141, 212),(168, 226, 255),frame,0,100)
+            particle dust{color:[color[0],color[1],color[2]],scale:1} ~ ~ ~ 0 0 0 1000 1 force @a
+            particle minecraft:dust{color:[1,1,1],scale:.6}
+    if predicate dani:percentage/7 :
+        execute rotated ~ ~90 run function dani:rhythm/systems/jinki/type/1/particle/1/circle_small
+        playsound minecraft:block.pointed_dripstone.drip_water master @a ~ ~ ~ .7 1.1
+        particle minecraft:falling_dripstone_water
+        particle minecraft:bubble_pop
+    if predicate dani:percentage/7 :
+        particle minecraft:end_rod ~ ~ ~ .05 .05 .05 .01 1 force
+        playsound minecraft:block.amethyst_block.chime master @a ~ ~ ~ .5 2
+    execute if score @s dani.rhythm.projectile.lifetime matches 1:
+        playsound minecraft:block.bubble_column.bubble_pop master @a ~ ~ ~ 1.2 1
+        particle minecraft:enchanted_hit ~ ~ ~ 0 0 0 .01 1 force @a
+        function dani:rhythm/systems/jinki/type/1/projectile/1/ripple
+function dani:rhythm/systems/jinki/type/1/projectile/1/movement:
+    tp @s ^ ^ ^.35
+    unless block ~ ~ ~ #dani:phasable run scoreboard players set @s dani.rhythm.projectile.lifetime 1
+    
+function dani:rhythm/systems/jinki/type/1/particle/1/cast:
+    execute positioned ~ ~1.6 ~ positioned ^ ^ ^.6 rotated ~ ~90 run function dani:rhythm/systems/jinki/type/1/particle/1/rotate
+
+function dani:rhythm/systems/jinki/type/1/particle/1/rotate:
+    circle_count = 100
+
+    for ring in range(1):
+        radius = 0.3 + ring * 0.2
+        for i in range(circle_count):
+            angle = 2 * math.pi * i / circle_count
+            x = round(radius * math.sin(angle), 3)
+            z = round(radius * math.cos(angle), 3)
+            particle dust{color:[1,1,1],scale:.4} ^x ^ ^z
+
+function dani:rhythm/systems/jinki/type/1/particle/1/circle_small:
+    for i in range(100):
+        angle = 2*math.pi / 100 * i
+        radius = 0.2
+        x = radius*math.sin(angle)
+        z = radius*math.cos(angle)
+        for frame in range (100):
+            if score @s dani.rhythm.projectile.lifetime matches frame:
+                color = pick_color((179, 229, 255),(59, 188, 255),frame,0,100)
+                particle dust{color:[color[0],color[1],color[2]],scale:.32} ^x ^ ^z
+
+function dani:rhythm/systems/jinki/type/1/projectile/1/ripple:
+    if block ~ ~ ~ #dani:phasable:
+        playsound minecraft:block.bell.resonate master @a ~ ~ ~ .2 2
+        playsound minecraft:block.bell.use master @a ~ ~ ~ .2 2
+        playsound minecraft:block.amethyst_block.break master @a ~ ~ ~ .5 2
+        if block ~ ~-.2 ~ #dani:phasable:
+            execute summon marker function dani:rhythm/entity/marker/projectile/summon {lifeTime:10,Tags:[""],ID:2,jinki_type:1,tp:"~ ~ ~",rotation:"~ ~90",command:"function dani:rhythm/systems/jinki/type/1/projectile/1/ripple_init"}
+        unless block ~ ~-.2 ~ #dani:phasable:
+            execute summon marker function dani:rhythm/entity/marker/projectile/summon {lifeTime:10,Tags:[""],ID:2,jinki_type:1,tp:"~ ~ ~",rotation:"~ 0",command:"function dani:rhythm/systems/jinki/type/1/projectile/1/ripple_init"}
+    unless block ~ ~ ~ #dani:phasable 
+        if block ~ ~.2 ~ #dani:phasable:
+            execute positioned ~ ~.2 ~ run function dani:rhythm/systems/jinki/type/1/projectile/1/ripple
+        unless block ~ ~.2 ~ #dani:phasable:
+            execute positioned ^ ^ ^-.1 run function dani:rhythm/systems/jinki/type/1/projectile/1/ripple
+
+function dani:rhythm/systems/jinki/type/1/projectile/1/ripple_init:
+    execute store result score @s dani.bolt.projectile.1.2.maxradius run random value 7..20
+    execute store result score @s dani.bolt.projectile.1.2.radiusIncrease run random value 1..3
+
+function dani:rhythm/systems/jinki/type/1/projectile/2/ripple:
+    scoreboard players add @s dani.bolt.projectile.1.2.radius 1
+    for maxrad in range (7,20):
+        if score @s dani.bolt.projectile.1.2.maxradius matches maxrad:
+            for radius in range (maxrad):
+                if score @s dani.bolt.projectile.1.2.radius matches radius:
+                    particleCount = 45 + radius * 2
+                    for i in range(particleCount):
+                        for radiusIncrease in range(1,4):
+                            if score @s dani.bolt.projectile.1.2.radiusIncrease matches radiusIncrease:
+                                properR = (radius * 0.2) + radiusIncrease *0.2
+                                angle = (2*math.pi / particleCount * i)
+                                x = properR*math.sin(angle)
+                                z = properR*math.cos(angle)
+                                particle dust_color_transition{from_color:[0.000,0.333,1.000],scale:0.5,to_color:[1.000,1.000,1.000]} ^x ^ ^z 0 0 0 1 0 normal

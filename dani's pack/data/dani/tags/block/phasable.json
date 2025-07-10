@@ -1,0 +1,26 @@
+{
+  "replace": true,
+  "values": [
+    "#minecraft:air",
+    "#minecraft:crops",
+    "#minecraft:flowers",
+    "#minecraft:sword_efficient",
+    "#minecraft:sword_instantly_mines",
+    "#minecraft:pressure_plates",
+    "#minecraft:buttons",
+    "minecraft:lever",
+    "minecraft:redstone_torch",
+    "minecraft:redstone_wire",
+    "minecraft:redstone_wall_torch",
+    "#minecraft:rails",
+    "#minecraft:all_signs",
+    "#minecraft:fences",
+    "#minecraft:fence_gates",
+    "tall_grass",
+    "short_grass",
+    "tall_dry_grass",
+    "short_dry_grass",
+    "#minecraft:saplings",
+    "#replaceable"
+  ]
+}

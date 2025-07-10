@@ -1,0 +1,11 @@
+execute if score @s dani.bolt.projectile.1.2.radius matches 0 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_38
+execute if score @s dani.bolt.projectile.1.2.radius matches 1 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_39
+execute if score @s dani.bolt.projectile.1.2.radius matches 2 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_40
+execute if score @s dani.bolt.projectile.1.2.radius matches 3 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_41
+execute if score @s dani.bolt.projectile.1.2.radius matches 4 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_42
+execute if score @s dani.bolt.projectile.1.2.radius matches 5 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_43
+execute if score @s dani.bolt.projectile.1.2.radius matches 6 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_44
+execute if score @s dani.bolt.projectile.1.2.radius matches 7 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_45
+execute if score @s dani.bolt.projectile.1.2.radius matches 8 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_46
+execute if score @s dani.bolt.projectile.1.2.radius matches 9 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_47
+execute if score @s dani.bolt.projectile.1.2.radius matches 10 run function dani:rhythm/systems/jinki/type/1/projectile/2/ripple/nested_execute_48

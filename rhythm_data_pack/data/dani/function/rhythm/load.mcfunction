@@ -19,9 +19,21 @@ scoreboard objectives add dani.rhythm.jinki.selectedItemSlot.old dummy
 scoreboard objectives add dani.rhythm.projectile.lifetime dummy
 scoreboard objectives add dani.rhythm.pulse.stage.consistency dummy
 scoreboard players set @a dani.rhythm.pulse 65
+scoreboard objectives add dani.rhythm.projectile.UUID dummy
 scoreboard objectives add dani.rhythm.projectile.ID dummy
 scoreboard objectives add dani.rhythm.projectile.jinki_type dummy
 scoreboard objectives add dani.rhythm.animation dummy
+
+scoreboard objectives add dani.bolt.projectile.speed dummy
+scoreboard objectives add dani.bolt.projectile.acceleration dummy
+scoreboard objectives add dani.bolt.projectile.color.val dummy
+scoreboard objectives add dani.bolt.projectile.1.2.radius dummy
+scoreboard objectives add dani.bolt.projectile.1.2.maxradius dummy
+scoreboard objectives add dani.bolt.particle.color.frame dummy
+scoreboard objectives add dani.bolt.projectile.1.2.radiusIncrease dummy
+scoreboard objectives add dani.bolt.projectile.speed dummy
+
+
 schedule function dani:rhythm/main1t 1 append
 schedule function dani:rhythm/main20t 20 replace
 function dani:rhythm/bolt_init

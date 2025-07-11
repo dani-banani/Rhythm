@@ -1,3 +1,5 @@
+scoreboard players add $system dani.rhythm.projectile.UUID 1
+scoreboard players operation @s dani.rhythm.projectile.UUID = $system dani.rhythm.projectile.UUID
 data merge entity @s {Tags: ["dani.entity", "dani.rhythm", "projectile"]}
 $data modify storage dani:projectile Tags set value $(Tags)
 data modify entity @s Tags append from storage dani:projectile Tags[]

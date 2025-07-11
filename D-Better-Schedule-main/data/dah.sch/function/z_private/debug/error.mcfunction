@@ -1,0 +1,1 @@
+tellraw @a {text:"[dah.sch DEBUG] ",color:"dark_aqua",extra:[{text:"No Return Value Recieved: Check your command, this is likely a syntax error.",color:"red"}]}

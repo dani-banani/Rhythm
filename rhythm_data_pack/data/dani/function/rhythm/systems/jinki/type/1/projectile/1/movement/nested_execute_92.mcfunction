@@ -1,0 +1,2 @@
+particle dust{color: [0.6061176470588235d, 0.8596078431372549d, 0.9865098039215686d], scale: 1} ~ ~ ~ 0 0 0 1000 1 force @a
+particle minecraft:dust{color: [1, 1, 1], scale: 0.3d}

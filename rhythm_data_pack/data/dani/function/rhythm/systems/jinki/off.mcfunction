@@ -12,3 +12,4 @@ item replace entity @s hotbar.6 from entity 00000000-0000-0000-0000-000000000000
 item replace entity @s hotbar.7 from entity 00000000-0000-0000-0000-000000000000 container.7
 item replace entity @s hotbar.8 from entity 00000000-0000-0000-0000-000000000000 container.8
 kill 00000000-0000-0000-0000-000000000000
+title @s actionbar ""

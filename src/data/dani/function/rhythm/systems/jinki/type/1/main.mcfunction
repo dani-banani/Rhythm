@@ -1,1 +1,0 @@
-# execute if entity @s[tag=dani.jinki.1.2.hit] run function dani:rhythm/systems/jinki/type/1/projectile/2/hold_enemy

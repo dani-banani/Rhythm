@@ -1,1 +1,0 @@
-scoreboard players remove @s dani.rhythm.animation 1

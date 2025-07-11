@@ -13,6 +13,7 @@
     "minecraft:area_effect_cloud",
     "minecraft:armor_stand",
     "#minecraft:boat",
-    "#minecraft:impact_projectiles"
+    "#minecraft:impact_projectiles",
+    "interaction"
   ]
 }

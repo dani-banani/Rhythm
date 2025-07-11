@@ -1,4 +1,4 @@
-# Rthym
+# Rhythm
 
 As of now this datapack only supports 1.21.7
 Access to my current datapack project as i update it

@@ -5,7 +5,7 @@ Access to my current datapack project as i update it
 ill add more stuff here as i progress.
 
 Current Features : 
-Heart Beat, pulse
+Heart Beat, pulse, first jinki, first auto, parrying projectile. beautiful api
 
 There will be three branches
 ### Main : Docummentation

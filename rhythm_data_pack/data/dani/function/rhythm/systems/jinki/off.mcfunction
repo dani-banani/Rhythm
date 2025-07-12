@@ -2,6 +2,7 @@ data modify entity 00000000-0000-0000-0000-000000000000 Items set from entity @e
 data modify storage dani:jinki slot1 set from entity @e[type=marker, sort=nearest, limit=1, tag=dani.player.marker.entity] data.SlotNow
 data modify storage dani:jinki slot2 set from entity @s SelectedItemSlot
 function dani:rhythm/systems/jinki/swap_slot with storage dani:jinki
+clear @s stick[item_model=air]
 item replace entity @s hotbar.0 from entity 00000000-0000-0000-0000-000000000000 container.0
 item replace entity @s hotbar.1 from entity 00000000-0000-0000-0000-000000000000 container.1
 item replace entity @s hotbar.2 from entity 00000000-0000-0000-0000-000000000000 container.2

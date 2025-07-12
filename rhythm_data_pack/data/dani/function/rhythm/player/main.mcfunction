@@ -4,3 +4,4 @@ execute if score @s dani.rhythm.jinki.status matches 1 run function dani:rhythm/
 execute if score @s dani.rhythm.animation matches 1.. run function dani:rhythm/player/animation/main
 execute if score @s dani.rhythm.jinki.status matches 1 run function dani:rhythm/systems/pulse/main
 function dani:rhythm/systems/movement/main
+execute if score @s dani.rhythm.pulse.deathtimer matches 0.. run function dani:rhythm/systems/pulse/dying

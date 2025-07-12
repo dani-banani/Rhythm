@@ -37,6 +37,6 @@ scoreboard objectives add dani.rhythm.animation dummy
 
 
 
-
+schedule function dani:rhythm/main2t 2 append
 schedule function dani:rhythm/main1t 1 append
 schedule function dani:rhythm/main20t 20 replace

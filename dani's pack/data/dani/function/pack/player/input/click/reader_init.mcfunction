@@ -8,7 +8,7 @@ scoreboard players operation $tempID dani.input.click.id = $tempUUID1 dani.input
 scoreboard players operation $tempID dani.input.click.id *= $const.31 dani.Global
 scoreboard players operation $tempID dani.input.click.id += $tempUUID4 dani.input.click.id
 scoreboard players operation @s dani.input.click.id = $tempID dani.input.click.id
-data modify entity @s width set value 0.5
+data modify entity @s width set value 0.65
 data modify entity @s height set value 1
 tag @s add dani.input.click.reader
 tag @s add dani.entity

@@ -1,0 +1,1 @@
+function dani:rhythm/user/jinki/transform_item {jinki_type:1}

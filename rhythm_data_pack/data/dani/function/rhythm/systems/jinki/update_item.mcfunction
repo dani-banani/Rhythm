@@ -1,0 +1,6 @@
+scoreboard players operation jinkitype dani.Global = @p[tag=playernow,limit=1] dani.rhythm.jinki.type 
+execute if score jinkitype dani.Global matches 1 run data modify entity @s equipment.mainhand.components."minecraft:item_model" set value "dani:starstroke"
+data modify entity @s equipment.mainhand.components."minecraft:custom_data".dani.active set value true
+data modify entity @s equipment.mainhand.components."minecraft:attribute_modifiers" append value {id:"movement_speed",type:"movement_speed",amount:-0.50,operation:"add_multiplied_base",slot:"offhand",display:{type:"default"}}
+data modify entity @s equipment.mainhand.components."minecraft:attribute_modifiers" append value {id:"armor",type:"armor",amount:0.50,operation:"add_multiplied_base",slot:"offhand",display:{type:"default"}}
+data modify entity @s equipment.mainhand.components."minecraft:attribute_modifiers" append value {id:"knockback_resistance",type:"knockback_resistance",amount:0.75,operation:"add_multiplied_base",slot:"offhand"}

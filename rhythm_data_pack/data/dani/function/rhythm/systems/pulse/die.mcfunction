@@ -1,3 +1,4 @@
+scoreboard players set success dani.Global 0
 execute store success score success dani.Global run gamerule showDeathMessages false
 kill @s
 $tellraw @a ["",{selector:"@s"},{text:"$(text)"}]
